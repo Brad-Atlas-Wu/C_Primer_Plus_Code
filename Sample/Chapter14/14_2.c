@@ -19,7 +19,6 @@ int main(void)
 {
 	struct book library[MAXBKS];	//定义book类型结构的数组
 	int count=0;	//计算输入了多少本书
-	int index;
 	
 	printf("Please enter the book title.\n");
 	printf("Press[Enter] at the start of a line to stop.\n");
@@ -37,8 +36,9 @@ int main(void)
 
 	if(count>0)
 	{
-		printf("Here is the list of your books:\n");
-		for(index=0;index<count;index++)
+
+		printf("Your book list:\n");
+		for(int index=0;index<count;index++)
 			printf("%s by %s : $%.2f\n",library[index].title,library[index].author,library[index].value);
 		
 	}
@@ -63,4 +63,3 @@ char * s_gets(char * st,int n)
         }
                 return ret_val;
 }
-
